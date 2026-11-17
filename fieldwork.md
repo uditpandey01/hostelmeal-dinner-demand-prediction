@@ -1,40 +1,42 @@
 # Fieldwork — HostelMeal (Dinner Only)
 
-> Complete this during your own visit. The sample rows in `data.csv` are synthetic and are NOT fieldwork evidence. Replace them with at least 20 genuine observations before submission.
-
 ## Visit details
-- Place (main mess / night canteen / both):
-- Date:
-- Observation start and end time (at least 20 minutes):
-- Person interviewed and role:
-- Permission for two timestamped photos:
 
-## Observation and counting method
-Explain whether you counted people entering, plates/tokens, or transactions. State how repeat canteen visits are handled. Keep main-mess attendance separate from canteen visits. The canteen operates until 3 AM; clarify whether your count covers dinner service only or also later visits.
+- **Date:** 18 November 2026
+- **Location:** Mega Mess
+- **Person spoken to:** Tarun
+- **Role:** Mess Supervisor
+- **Observation period:** 20 minutes — exact start/end time not supplied yet
+- **Photos:** The student reports taking/uploading two timestamped photos. Confirm that both image files are present in the repository's `evidence/` folder before submission.
 
-## Conversation
-Record the person's real name/role and three accurate things they said:
-1.
-2.
-3.
+## What the supervisor raised
 
-One thing that surprised you:
--
+The following points are recorded as summaries of the student's notes, not verbatim quotations:
 
-What changed in your understanding:
--
+1. Food is being wasted.
+2. Attendance and food-demand estimates rely on human judgement and can be inaccurate.
+3. Inaccurate estimates can cause financial loss.
 
-## Questions
-1. How do you estimate dinner preparation quantity?
-2. How is main-mess dinner attendance counted?
-3. Does the night canteen keep separate sales or visitor records?
-4. Which menu items seem to change dinner demand?
-5. What happens when attendance is much higher or lower than expected?
-6. Are leftovers or food waste measured?
+## Observation and surprise
 
-## Photo evidence
-- Photo 1: filename, actual timestamp, what it shows, permission:
-- Photo 2: filename, actual timestamp, what it shows, permission:
+- **Surprise:** The student observed that food wastage was higher than expected.
 
-## Data collection
-Use the 8 columns in `data.csv`. Each row should represent one date's dinner observation, with both locations recorded separately. Use real counts from your own observation or clearly documented staff records. Do not invent missing values. Keep canteen visits labelled as visits/transactions unless unique students can genuinely be deduplicated.
+## How this connects to the project
+
+The conversation suggests that dinner demand estimation may help the mess plan food quantities more carefully. HostelMeal currently makes separate estimates for main-mess dinner attendance and night-canteen visits using menu and weekday similarity.
+
+This is a prototype, not proof that food waste or financial loss has been reduced. Any claimed impact would need to be measured after staff use the predictions.
+
+## Details to complete before submission
+
+- Add the exact 20-minute observation start and end time.
+- Add the two timestamped photo filenames (and ensure the files are in `evidence/`).
+- Add three concrete observations from the visit, if recorded (for example, how food was prepared, served, or left over). Do not invent details.
+- If the supervisor gave specific examples or exact wording, add them accurately and mark direct quotations with quotation marks.
+- Ask whether the supervisor is comfortable being identified by name in the public repository; anonymise the name if not.
+
+## Count definitions to verify
+
+- **Main-mess dinner attendance:** Clarify whether this is a count of unique students, plates served, or another measure.
+- **Night-canteen visits:** Clarify whether repeat visits by the same student are counted more than once.
+- Keep the two measures separate in `data.csv`.
