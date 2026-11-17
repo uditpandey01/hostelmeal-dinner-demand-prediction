@@ -1,0 +1,29 @@
+date,weekday,period,day_type,mess_dinner_menu,canteen_dinner_menu,mess_attendance,canteen_visits,data_status
+2026-10-01,Monday,Dinner,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","chicken roll, fried rice, cold drink",930,134,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-02,Tuesday,Dinner,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","chowmein, egg roll, fried rice",963,308,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-03,Wednesday,Dinner,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema, egg curry","paneer roll, noodles, tea",900,283,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-04,Thursday,Dinner,Veg,"masala chokha, curd, papad, pickle","chowmein, egg roll, fried rice",966,229,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-05,Friday,Dinner,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","maggi, omelette, tea",1136,228,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-06,Saturday,Dinner,Non-veg,"rice, roti, chicken curry, salad","paneer roll, noodles, tea",499,376,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-07,Sunday,Dinner,Veg,"paneer curry, dal, rice, salad","maggi, omelette, tea",794,292,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-08,Monday,Dinner,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","maggi, omelette, tea",904,158,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-09,Tuesday,Dinner,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","egg bhurji, paratha, tea",921,339,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-10,Wednesday,Dinner,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema, egg curry","egg bhurji, paratha, tea",904,245,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-11,Thursday,Dinner,Veg,"masala chokha, curd, papad, pickle","chicken roll, fried rice, cold drink",1032,333,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-12,Friday,Dinner,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","paneer roll, noodles, tea",1181,171,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-13,Saturday,Dinner,Non-veg,"rice, roti, chicken curry, salad","chicken roll, fried rice, cold drink",530,391,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-14,Sunday,Dinner,Veg,"paneer curry, dal, rice, salad","paneer roll, noodles, tea",786,305,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-15,Monday,Dinner,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","chicken roll, fried rice, cold drink",948,140,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-16,Tuesday,Dinner,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","maggi, omelette, tea",845,302,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-17,Wednesday,Dinner,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema, egg curry","chowmein, egg roll, fried rice",946,282,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-18,Thursday,Dinner,Veg,"masala chokha, curd, papad, pickle","maggi, omelette, tea",1001,326,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-19,Friday,Dinner,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","paneer roll, noodles, tea",1216,224,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-20,Saturday,Dinner,Non-veg,"rice, roti, chicken curry, salad","chicken roll, fried rice, cold drink",482,394,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-21,Sunday,Dinner,Veg,"paneer curry, dal, rice, salad","chicken roll, fried rice, cold drink",888,237,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-22,Monday,Dinner,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","paneer roll, noodles, tea",793,120,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-23,Tuesday,Dinner,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","paneer roll, noodles, tea",916,269,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-24,Wednesday,Dinner,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema, egg curry","chowmein, egg roll, fried rice",808,269,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-25,Thursday,Dinner,Veg,"masala chokha, curd, papad, pickle","chicken roll, fried rice, cold drink",872,235,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-26,Friday,Dinner,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","egg bhurji, paratha, tea",1140,116,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-27,Saturday,Dinner,Non-veg,"rice, roti, chicken curry, salad","egg bhurji, paratha, tea",424,364,SYNTHETIC_DEVELOPMENT_ONLY
+2026-10-28,Sunday,Dinner,Veg,"paneer curry, dal, rice, salad","maggi, omelette, tea",712,223,SYNTHETIC_DEVELOPMENT_ONLY
