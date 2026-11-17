@@ -1,32 +1,40 @@
-# Fieldwork — dinner-only HostelMeal
+# Fieldwork — HostelMeal (Dinner Only)
 
-Complete during real observation. Do not invent names, quotes, timestamps, photos or counts.
+> Complete this during your own visit. The sample rows in `data.csv` are synthetic and are NOT fieldwork evidence. Replace them with at least 20 genuine observations before submission.
 
-## Observation
-- Place:
+## Visit details
+- Place (main mess / night canteen / both):
 - Date:
-- Start/end time (observe for at least 20 minutes):
-- Count method and person responsible:
-- Were photos permitted?
+- Observation start and end time (at least 20 minutes):
+- Person interviewed and role:
+- Permission for two timestamped photos:
 
-## Two timestamped photos
-- Photo 1 filename/time/context:
-- Photo 2 filename/time/context:
+## Observation and counting method
+Explain whether you counted people entering, plates/tokens, or transactions. State how repeat canteen visits are handled. Keep main-mess attendance separate from canteen visits. The canteen operates until 3 AM; clarify whether your count covers dinner service only or also later visits.
 
-## Interview
-- Person's real name and role:
-- Three accurate things they said:
-  1.
-  2.
-  3.
-- One surprising thing:
+## Conversation
+Record the person's real name/role and three accurate things they said:
+1.
+2.
+3.
 
-## Dinner data collection
-Collect at least 20 real rows. For each date, record:
-- Main mess dinner menu and mess dinner attendance.
-- Separate night canteen dinner menu and canteen visits.
-- Define the dinner time window and separately record post-dinner visits if included.
-- Day type, weekday, hostel occupancy/context, holidays/events and stockouts where known.
-- State whether counts mean people, meal plates, tokens or transactions. Do not call repeatable canteen transactions unique students.
+One thing that surprised you:
+-
 
-Keep actual observations in `data.csv`; do not use synthetic demo rows as fieldwork.
+What changed in your understanding:
+-
+
+## Questions
+1. How do you estimate dinner preparation quantity?
+2. How is main-mess dinner attendance counted?
+3. Does the night canteen keep separate sales or visitor records?
+4. Which menu items seem to change dinner demand?
+5. What happens when attendance is much higher or lower than expected?
+6. Are leftovers or food waste measured?
+
+## Photo evidence
+- Photo 1: filename, actual timestamp, what it shows, permission:
+- Photo 2: filename, actual timestamp, what it shows, permission:
+
+## Data collection
+Use the 8 columns in `data.csv`. Each row should represent one date's dinner observation, with both locations recorded separately. Use real counts from your own observation or clearly documented staff records. Do not invent missing values. Keep canteen visits labelled as visits/transactions unless unique students can genuinely be deduplicated.

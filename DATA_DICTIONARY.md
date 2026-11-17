@@ -1,12 +1,14 @@
-# Dinner-only data dictionary
+# Data dictionary (8 columns)
 
-Suggested real `data.csv` columns:
-- date, weekday
-- mess_dinner_menu, canteen_dinner_menu
-- mess_attendance (define people/plates/tokens)
-- canteen_visits (visits/transactions unless deduplicated)
-- dinner_start, dinner_end, canteen_time_window
-- day_type, hostel_occupancy, event_or_holiday, stockout_notes
-- count_method, collector, data_status
+| Column | Meaning |
+|---|---|
+| `date` | Date of the dinner observation |
+| `weekday` | Day of the week |
+| `day_type` | Veg or Non-veg classification of the main mess menu |
+| `mess_dinner_menu` | Main mess dinner menu |
+| `canteen_dinner_menu` | Separate night-canteen menu |
+| `mess_attendance` | Main mess dinner attendance count |
+| `canteen_visits` | Night-canteen visits/transactions; not necessarily unique students |
+| `notes` | Context and data provenance |
 
-Keep `SYNTHETIC_DEVELOPMENT_ONLY` clearly marked on generated demo rows.
+**Important:** Current rows in `data.csv` are synthetic examples for implementation/testing only. Replace them with at least 20 personally collected real observations before assignment submission. Keep counts separate by location and use a consistent counting method. If you need to distinguish dinner-time from post-dinner visits until 3 AM later, add a time-slot column only after discussing the scope with the canteen operator.
