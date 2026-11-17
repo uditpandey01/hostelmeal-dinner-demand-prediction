@@ -24,3 +24,26 @@ The prototype uses a simple menu-word overlap and weekday/day-type similarity ba
 - Canteen visits may include repeat visits.
 - Holidays, exams, hostel occupancy, events, stockouts and other factors may affect demand.
 - Food quantity prediction requires additional portion/recipe and leftover data.
+
+
+## Run the dinner forecast app
+
+```bash
+python -m pip install -r requirements.txt
+streamlit run app.py
+```
+
+The app reads `data.csv` from the project folder. The current bundled rows are synthetic and are only for software testing. Replace them with your own field observations before using the project as assignment evidence.
+
+## Prediction method
+
+The app ranks past records using a simple score: menu word-overlap similarity (65%), weekday match (25%), and Veg/Non-veg match (10%). It averages the target count from the top matching records. Main-mess attendance and night-canteen visits are forecast separately.
+
+This is an explainable baseline, not a validated machine-learning model. Do not claim accuracy until you test it against real observations that were not used to build the prediction.
+
+## Run basic tests
+
+```bash
+python -m pip install pytest
+pytest -q
+```

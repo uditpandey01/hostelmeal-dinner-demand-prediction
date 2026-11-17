@@ -1,64 +1,120 @@
-import streamlit as st
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+from predictor import predict_dinner
 
 st.set_page_config(page_title="HostelMeal Dinner Forecast", page_icon="🍽️", layout="wide")
 st.title("🍽️ HostelMeal — Dinner Demand Forecast")
-st.caption("Dinner-only attendance planning for the main mess and separate night canteen")
+st.caption("Menu-based planning for main-mess dinner and the separate night canteen.")
 
-st.warning("DEMO MODE: All rows in the bundled sample dataset are synthetic. Replace them with personally collected observations before submission.")
+DATA_PATH = Path(__file__).parent / "data.csv"
 
 @st.cache_data
-def load_data():
-    return pd.read_csv(Path(__file__).parent / "sample_data_synthetic.csv")
+def load_data(path: str, modified: float) -> pd.DataFrame:
+    return pd.read_csv(path)
 
-df = load_data()
-st.sidebar.header("Tomorrow's dinner")
-weekday = st.sidebar.selectbox("Day", ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"])
-day_type = st.sidebar.selectbox("Mess dinner type", ["Veg","Non-veg"])
-mess_menu = st.sidebar.text_area("Main mess dinner menu", "rice, dal, seasonal vegetables, roti")
-canteen_menu = st.sidebar.text_area("Night canteen dinner menu", "noodles, egg roll, fried rice")
+try:
+    df = load_data(str(DATA_PATH), DATA_PATH.stat().st_mtime)
+except FileNotFoundError:
+    st.error("data.csv was not found. Keep it in the same folder as app.py.")
+    st.stop()
+except Exception as exc:
+    st.error(f"Could not read data.csv: {exc}")
+    st.stop()
 
-def similarity(a, b):
-    a = set(str(a).lower().replace(",", " ").split())
-    b = set(str(b).lower().replace(",", " ").split())
-    return len(a & b) / len(a | b) if a | b else 0.0
+synthetic = (
+    "notes" in df.columns
+    and df["notes"].fillna("").astype(str).str.contains("SYNTHETIC SAMPLE ONLY", case=False).any()
+)
+if synthetic:
+    st.warning(
+        "DEMO MODE: data.csv currently contains synthetic sample rows. "
+        "Use this only to test the app. Replace them with your own real observations before submission."
+    )
 
-def estimate(data, menu_col, target_col, menu, weekday, day_type, k=5):
-    pool = data.copy()
-    pool["menu_similarity"] = pool[menu_col].apply(lambda x: similarity(menu, x))
-    pool["weekday_match"] = (pool["weekday"] == weekday).astype(int)
-    pool["day_type_match"] = (pool["day_type"] == day_type).astype(int)
-    pool["score"] = 0.65*pool["menu_similarity"] + 0.25*pool["weekday_match"] + 0.10*pool["day_type_match"]
-    nearest = pool.sort_values("score", ascending=False).head(k)
-    return round(nearest[target_col].mean()), nearest
+st.sidebar.header("Upcoming dinner")
+weekday = st.sidebar.selectbox(
+    "Weekday",
+    ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+)
+day_type = st.sidebar.selectbox("Dinner type", ["Veg", "Non-veg"])
+mess_menu = st.sidebar.text_area(
+    "Main mess dinner menu",
+    "rice, dal, seasonal vegetables, roti",
+)
+canteen_menu = st.sidebar.text_area(
+    "Night canteen dinner menu",
+    "noodles, egg roll, fried rice",
+)
+k = st.sidebar.slider("Similar past records to use", min_value=1, max_value=10, value=5)
 
-mess_est, mess_rows = estimate(df, "mess_dinner_menu", "mess_attendance", mess_menu, weekday, day_type)
-canteen_est, canteen_rows = estimate(df, "canteen_dinner_menu", "canteen_visits", canteen_menu, weekday, day_type)
+if st.sidebar.button("Predict dinner demand", type="primary"):
+    try:
+        estimates, matches, warnings = predict_dinner(
+            df, weekday, day_type, mess_menu, canteen_menu, k
+        )
+        st.subheader("Estimated dinner demand")
+        col1, col2 = st.columns(2)
+        col1.metric("Main mess attendance", f'{estimates["mess_attendance"]:,} students')
+        col2.metric("Night canteen activity", f'{estimates["canteen_visits"]:,} visits')
 
-c1,c2,c3=st.columns(3)
-c1.metric("Predicted main mess attendance", f"{mess_est:,}")
-c2.metric("Predicted night canteen visits", f"{canteen_est:,}")
-c3.metric("Hostel population reference", "≈1,500")
+        st.caption(
+            "These are estimates from the closest matching rows, not guaranteed counts. "
+            "Canteen visits may include repeat visits and are not unique students unless deduplicated."
+        )
+        if warnings:
+            st.warning("Data quality: " + " ".join(warnings))
 
-st.subheader("Comparable historical demo records")
-left,right=st.columns(2)
-with left:
-    st.markdown("**Main mess**")
-    st.dataframe(mess_rows[["date","weekday","mess_dinner_menu","mess_attendance","menu_similarity"]], use_container_width=True)
-with right:
-    st.markdown("**Night canteen**")
-    st.dataframe(canteen_rows[["date","weekday","canteen_dinner_menu","canteen_visits","menu_similarity"]], use_container_width=True)
+        left, right = st.columns(2)
+        with left:
+            st.markdown("**Closest main-mess records**")
+            st.dataframe(
+                matches["mess"][[
+                    "date", "weekday", "mess_dinner_menu",
+                    "mess_attendance", "similarity_score",
+                ]],
+                use_container_width=True,
+                hide_index=True,
+            )
+        with right:
+            st.markdown("**Closest night-canteen records**")
+            st.dataframe(
+                matches["canteen"][[
+                    "date", "weekday", "canteen_dinner_menu",
+                    "canteen_visits", "similarity_score",
+                ]],
+                use_container_width=True,
+                hide_index=True,
+            )
+    except ValueError as exc:
+        st.error(str(exc))
 
-st.subheader("Dinner attendance pattern in demo data")
-st.bar_chart(df.groupby("weekday")[["mess_attendance","canteen_visits"]].mean())
+st.divider()
+st.subheader("Dataset overview")
+st.write(f"Rows loaded: **{len(df)}**")
+if "weekday" in df.columns:
+    st.bar_chart(df.groupby("weekday")[["mess_attendance", "canteen_visits"]].mean())
 
+st.subheader("How the estimate works")
+st.markdown(
+    """
+    1. It compares the entered menu with each historical menu using word overlap.
+    2. It adds points when the weekday and Veg/Non-veg type match.
+    3. It averages the target counts from the top matching rows.
+
+    **Scoring weights:** menu similarity 65%, weekday match 25%, dinner type match 10%.
+    """
+)
 st.subheader("Limitations")
-st.markdown("""
-- Synthetic data is only for testing the interface and code.
-- Menu matching uses simple word overlap; it does not understand taste or dish quality.
-- Canteen visits are visits/transactions, not necessarily unique students.
-- Main mess and canteen counts must be collected using consistent, documented methods.
-- Five reported dinner figures are kept separately until their location/counting scope is confirmed.
-- Do not claim prediction accuracy until evaluated against real held-out observations.
-""")
+st.markdown(
+    """
+    - This is a transparent baseline, not a trained or accuracy-validated machine-learning model.
+    - Similar words do not necessarily mean similar popularity, taste, or portion demand.
+    - Predictions improve only when the CSV contains enough real, consistently measured observations.
+    - Main-mess attendance and canteen visits are separate measures and must not be combined.
+    - Canteen visits are not unique students unless the collection method deduplicates people.
+    - The current dataset has no time-slot column, so it cannot separately forecast pre- and post-dinner canteen demand.
+    """
+)
