@@ -15,7 +15,7 @@ HostelMeal aims to help mess staff make better dinner-planning decisions using h
 ## 2. Field Research
 
 - **Location:** Mega Mess
-- **Visit date:** 18 November 2026
+- **Visit date:** 17 November 2026
 - **Person interviewed:** Tarun
 - **Role:** Mess Supervisor
 
@@ -91,7 +91,7 @@ The scoring weights are:
 
 The application calculates main-mess attendance and night-canteen visits independently.
 
-This is an explainable baseline prediction method, not a validated machine-learning model.
+This is an baseline prediction method, not a validated machine-learning model.
 
 ## 7. Installation and Setup
 
@@ -182,10 +182,4 @@ hostelmeal_project/
 
 ## 13. Demo Video
 
-**3-minute application demonstration:** [Add your video link here]
-
-## 14. Author
-
-Developed as a B.Tech take-home assignment.
-
-**Project:** HostelMeal — Menu-Based Dinner Attendance & Demand Prediction
+- 3-minute application demonstration: [Add your video link here]

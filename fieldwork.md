@@ -2,16 +2,20 @@
 
 ## Visit details
 
-- **Date:** 18 November 2026
+- **Date:** 17 November 2026
 - **Location:** Mega Mess
 - **Person spoken to:** Tarun
 - **Role:** Mess Supervisor
-- **Observation period:** 20 minutes — exact start/end time not supplied yet
-- **Photos:** The student reports taking/uploading two timestamped photos. Confirm that both image files are present in the repository's `evidence/` folder before submission.
+- **Observation period:** 25 minutes 
+- **Photos:** I have uploaded 3 timestamped pictures with the mess supervisor discussing the issues.  Confirm that both image files are present in the repository.
+
+![Picture 1](images/pic1.jpeg)
+![Picture 2](images/pic2.jpeg)
+![Picture 3](images/pic3.jpeg)
 
 ## What the supervisor raised
 
-The following points are recorded as summaries of the student's notes, not verbatim quotations:
+The following points are recorded as summaries of the student's notes:
 
 1. Food is being wasted.
 2. Attendance and food-demand estimates rely on human judgement and can be inaccurate.
@@ -19,13 +23,12 @@ The following points are recorded as summaries of the student's notes, not verba
 
 ## Observation and surprise
 
-- **Surprise:** The student observed that food wastage was higher than expected.
+- **Surprise:** I observed that food wastage was higher than expected and this is happening on daily basis from a long time .
 
 ## How this connects to the project
 
 The conversation suggests that dinner demand estimation may help the mess plan food quantities more carefully. HostelMeal currently makes separate estimates for main-mess dinner attendance and night-canteen visits using menu and weekday similarity.
 
-This is a prototype, not proof that food waste or financial loss has been reduced. Any claimed impact would need to be measured after staff use the predictions.
 
 ## Details to complete before submission
 

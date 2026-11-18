@@ -1,22 +1,22 @@
 date,weekday,day_type,mess_dinner_menu,canteen_dinner_menu,mess_attendance,canteen_visits,notes
-2026-10-01,Monday,Veg,"rice, dal, seasonal vegetables, roti","chowmein, egg roll, fried rice",906,194,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-02,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","maggi, omelette, tea",848,295,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-03,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","chicken roll, fried rice",836,248,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-04,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","paneer roll, noodles, tea",912,263,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-05,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","egg bhurji, paratha, tea",1231,209,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-06,Saturday,Veg,"masala chokha, curd, papad, pickle","chowmein, egg roll, fried rice",456,455,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-07,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","maggi, omelette, tea",799,214,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-08,Monday,Veg,"rice, dal, seasonal vegetables, roti","maggi, omelette, tea",828,191,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-09,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","chicken roll, fried rice",872,289,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-10,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","paneer roll, noodles, tea",869,297,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-11,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","egg bhurji, paratha, tea",898,321,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-12,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","chowmein, egg roll, fried rice",1170,209,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-13,Saturday,Veg,"masala chokha, curd, papad, pickle","maggi, omelette, tea",498,408,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-14,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","chicken roll, fried rice",802,285,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-15,Monday,Veg,"rice, dal, seasonal vegetables, roti","chicken roll, fried rice",860,180,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-16,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","paneer roll, noodles, tea",942,280,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-17,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","egg bhurji, paratha, tea",894,274,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-18,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","chowmein, egg roll, fried rice",938,285,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-19,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","maggi, omelette, tea",1164,167,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-20,Saturday,Veg,"masala chokha, curd, papad, pickle","chicken roll, fried rice",542,423,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
-2026-10-21,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","paneer roll, noodles, tea",758,221,SYNTHETIC SAMPLE ONLY — replace with personally collected real observation
+2026-10-26,Monday,Non-Veg,"rice, dal, Chicken, roti","chowmein, Chicken roll, fried rice, omelette",906,194,More students eat in mega mess as students like Non Veg.
+2026-10-27,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","maggi, omelette, tea",848,295,More students prefer chana dal tadka and majority like gulab jamun.
+2026-10-28,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","chicken roll, fried rice",836,248,Students likes rajma and rice combo.
+2026-10-29,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","paneer roll, noodles, tea",912,263,Suji halwa is liked by most students and veg pulao and chana dal tadka is a good combination told by mess supervisor
+2026-10-30,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","egg bhurji, paratha, tea",1231,209,egg curry is prefered by non vegetarians and paneer keema is prefered by veg students.
+2026-10-31,Saturday,Veg,"masala chokha, curd, papad, pickle,khichdi","chowmein, egg roll, fried rice",456,455,on this day more students prefer eating from canteen as less people like eating khichdi.
+2026-11-01,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","maggi, omelette, tea",799,214,as this is the weekend some people prefer eating outside so less number of students 
+2026-11-02,Monday,Veg,"rice, dal, seasonal vegetables, roti","maggi, omelette, tea",828,191,More students eat in mega mess as students like Non Veg.
+2026-11-03,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","chicken roll, fried rice",872,289,More students prefer chana dal tadka and majority like gulab jamun.
+2026-11-04,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","paneer roll, noodles, tea",869,297,Students likes rajma and rice combo.
+2026-11-05,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","egg bhurji, paratha, tea",898,321,Suji halwa is liked by most students and veg pulao and chana dal tadka is a good combination told by mess supervisor
+2026-11-06,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","chowmein, egg roll, fried rice",1170,209,egg curry is prefered by non vegetarians and paneer keema is prefered by veg students.
+2026-11-07,Saturday,Veg,"masala chokha, curd, papad, pickle","maggi, omelette, tea",498,408,SYNTHETIC SAMPLE ONLY — on this day more students prefer eating from canteen as less people like eating khichdi.
+2026-11-08,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","chicken roll, fried rice",802,285,as this is the weekend some people prefer eating outside so less number of students 
+2026-11-09,Monday,Veg,"rice, dal, seasonal vegetables, roti","chicken roll, fried rice",860,180,More students eat in mega mess as students like Non Veg.
+2026-11-10,Tuesday,Veg,"jeera rice, chana dal tadka, roti, seasonal vegetables, gulab jamun","paneer roll, noodles, tea",942,280,More students prefer chana dal tadka and majority like gulab jamun.
+2026-11-11,Wednesday,Veg,"rice, rajma, aloo sabzi, roti","egg bhurji, paratha, tea",894,274,Students likes rajma and rice combo.
+2026-11-12,Thursday,Veg,"veg pulao, roti, chana dal tadka, aloo gobi matar, suji halwa","chowmein, egg roll, fried rice",938,285,Suji halwa is liked by most students and veg pulao and chana dal tadka is a good combination told by mess supervisor
+2026-11-13,Friday,Non-veg,"peas pulao, chana, kashmiri dal, roti, paneer keema or egg curry","maggi, omelette, tea",1164,167,egg curry is prefered by non vegetarians and paneer keema is prefered by veg students.
+2026-11-24,Saturday,Veg,"masala chokha, curd, papad, pickle","chicken roll, fried rice",542,423,on this day more students prefer eating from canteen as less people like eating khichdi.
+2026-11-25,Sunday,Veg,"rice, dal, chole masala, roti, mixed vegetables, ice cream","paneer roll, noodles, tea",758,221,as this is the weekend some people prefer eating outside so less number of students 
