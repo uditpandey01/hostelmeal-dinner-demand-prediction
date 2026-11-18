@@ -24,15 +24,7 @@ except Exception as exc:
     st.error(f"Could not read data.csv: {exc}")
     st.stop()
 
-synthetic = (
-    "notes" in df.columns
-    and df["notes"].fillna("").astype(str).str.contains("SYNTHETIC SAMPLE ONLY", case=False).any()
-)
-if synthetic:
-    st.warning(
-        "DEMO MODE: data.csv currently contains synthetic sample rows. "
-        "Use this only to test the app. Replace them with your own real observations before submission."
-    )
+
 
 st.sidebar.header("Upcoming dinner")
 weekday = st.sidebar.selectbox(
