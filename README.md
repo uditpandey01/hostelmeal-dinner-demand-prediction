@@ -98,13 +98,13 @@ This is an baseline prediction method, not a validated machine-learning model.
 ### Step 1: Clone the repository
 
 ```bash
-git clone YOUR_PUBLIC_GITHUB_REPOSITORY_URL
+git clone https://github.com/uditpandey01/hostelmeal-dinner-demand-prediction
 ```
 
 ### Step 2: Open the project folder
 
 ```bash
-cd hostelmeal_project
+cd HostelMeal
 ```
 
 ### Step 3: Install dependencies
@@ -135,13 +135,6 @@ The application will open in your browser.
 ## 9. Sample Application Output
 
 Add a screenshot of your working application here.
-
-**Example format:**
-
-- Main mess attendance: [Insert actual prediction]
-- Night canteen visits: [Insert actual prediction]
-
-These values should come directly from a run of the application using your real dataset. They should not be invented or presented as guaranteed attendance.
 
 ## 10. Limitations
 
@@ -182,4 +175,4 @@ hostelmeal_project/
 
 ## 13. Demo Video
 
-- 3-minute application demonstration: [Add your video link here]
+- 3-minute application demonstration: [(https://drive.google.com/file/d/1aQ_AZfu2PQmPJm7XesTfFfL9ddjchLJr/view?usp=sharing)]
